@@ -30,10 +30,21 @@ public class SnakeLadder
 		}
 		return startPos;
 		
-   	 
+   	 }
+	public int getPosition(SnakeLadder s1)
+    {
+    	int num=0;
+    	num=s1.getRollNum();
+    	 startPos=s1.getOption(num);
+    	if(startPos<0)
+    	{
+    		startPos=0;
+    	}
+    	return startPos;
     }
 	public static void main(String[] args)
 	{
+		int count=0;
 		int startPos=0;	
 		System.out.println("welcome to snackladder programme");
 		//UC1
@@ -47,6 +58,26 @@ public class SnakeLadder
 		//UC3
 		
 		System.out.println("after roll user position is "+s1.getOption(digit));	
+		//UC4
+		
+		s1.startPos=0;
+	    while(startPos!=100)
+		{
+	    	startPos=s1.getPosition(s1);
+			if(startPos==100)
+		    {
+		    	break;
+		    }
+		    else
+		    {
+		    	startPos=s1.getPosition(s1);
+		    	
+		  
+		    }
+			count++;
+			
+		}
+	    System.out.println("user position is "+startPos);
 	}
 
 }
