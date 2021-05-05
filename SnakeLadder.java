@@ -21,15 +21,15 @@ public class SnakeLadder
 			   break;
 			   
 		   case LADDER:
+			   startPos=startPos+dieRollNum;
 			   if(startPos>100)
 			   {
-				   startPos=startPos;
+				   startPos=startPos-dieRollNum;
 			   }
 			   else
 			   {
-				   startPos=startPos+dieRollNum;
+				   break;
 			   }
-			   break;
 			   
 		   case SNAKE:
 			   startPos=startPos-dieRollNum;
@@ -47,6 +47,7 @@ public class SnakeLadder
     	{
     		startPos=0;
     	}
+    	
     	return startPos;
     }
 	public static void main(String[] args)
@@ -78,13 +79,12 @@ public class SnakeLadder
 		    else
 		    {
 		    	startPos=s1.getPosition(s1);
-		    	
-		  
 		    }
 			count++;
 			
 		}
 	    System.out.println("user position is "+startPos);
+	    
 	}
 
 }
