@@ -63,8 +63,8 @@ public class SnakeLadder
 		s1.startPos=0;
 	    while(startPos!=100)
 		{
-	    	startPos=s1.getPosition(s1);
-			if(startPos==100)
+	    	   startPos=s1.getPosition(s1);
+		    if(startPos==100)
 		    {
 		    	break;
 		    }
