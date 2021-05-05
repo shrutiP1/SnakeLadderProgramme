@@ -61,10 +61,11 @@ public class SnakeLadder
 		//UC4
 		
 		s1.startPos=0;
-	      while(startPos!=100)
-		 {
-	    	     startPos=s1.getPosition(s1);
-			if(startPos==100)
+    //UC4
+	    while(startPos!=100)
+		{
+	    	 startPos=s1.getPosition(s1);
+		    if(startPos==1)
 		    {
 		    	break;
 		    }
