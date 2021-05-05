@@ -21,15 +21,15 @@ public class SnakeLadder
 			   break;
 			   
 		   case LADDER:
+			   startPos=startPos+dieRollNum;
 			   if(startPos>100)
 			   {
-				   startPos=startPos;
+				   startPos=startPos-dieRollNum;
 			   }
 			   else
 			   {
-				   startPos=startPos+dieRollNum;
+				   break;
 			   }
-			   break;
 			   
 		   case SNAKE:
 			   startPos=startPos-dieRollNum;
@@ -42,11 +42,12 @@ public class SnakeLadder
     {
     	int num=0;
     	num=s1.getRollNum();
-    	 startPos=s1.getOption(num);
+    	startPos=s1.getOption(num);
     	if(startPos<0)
     	{
     		startPos=0;
     	}
+    	System.out.println("player position after roll is "+startPos);
     	return startPos;
     }
 	public static void main(String[] args)
@@ -85,6 +86,7 @@ public class SnakeLadder
 			
 		}
 	    System.out.println("user position is "+startPos);
+	    System.out.println("dice was played "+count+" no of time to win");
 	}
 
 }
