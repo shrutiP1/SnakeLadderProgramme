@@ -78,7 +78,7 @@ public class SnakeLadder
 				   break;
 			   
 			  
-			case SNAKE:
+		case SNAKE:
 		     	   startPos=startPos-dieRollNum;
 		 	        break;
     }
@@ -136,7 +136,7 @@ public class SnakeLadder
             //UC6
 
 	    System.out.println("dice was played "+count+" no of time to win");
-         //UC7
+           //UC7
 	    
 	    SnakeLadder player1=new SnakeLadder();
 	    SnakeLadder player2=new SnakeLadder();
