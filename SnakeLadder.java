@@ -21,7 +21,14 @@ public class SnakeLadder
 			   break;
 			   
 		   case LADDER:
-			   startPos=startPos+dieRollNum;
+			   if(startPos>100)
+			   {
+				   startPos=startPos;
+			   }
+			   else
+			   {
+				   startPos=startPos+dieRollNum;
+			   }
 			   break;
 			   
 		   case SNAKE:
